@@ -8,9 +8,8 @@ static const char *const TAG = "remote.symphony";
 
 static const uint16_t ZERO_MARK = 400;
 static const uint16_t ZERO_SPACE = 1250;
-static const uint16_t ONE_MARK = kSymphonyZeroSpace;
-static const uint16_t ONE_SPACE = kSymphonyZeroMark;
-static const uint32_t FOOTER_GAP = 4 * (kSymphonyZeroMark + kSymphonyZeroSpace);
+static const uint16_t ONE_MARK = ZERO_SPACE;
+static const uint16_t ONE_SPACE = ZERO_MARK;
 
 void SymphonyProtocol::encode(RemoteTransmitData *dst, const SymphonyData &data) {
   dst->set_carrier_frequency(38000);
@@ -23,6 +22,8 @@ void SymphonyProtocol::encode(RemoteTransmitData *dst, const SymphonyData &data)
       dst->item(ZERO_MARK, ZERO_SPACE);
     }
   }
+
+  dst->
 }
 optional<SymphonyData> SymphonyProtocol::decode(RemoteReceiveData src) {
   SymphonyData out{
