@@ -22,8 +22,6 @@ void SymphonyProtocol::encode(RemoteTransmitData *dst, const SymphonyData &data)
       dst->item(ZERO_MARK, ZERO_SPACE);
     }
   }
-
-  dst->
 }
 optional<SymphonyData> SymphonyProtocol::decode(RemoteReceiveData src) {
   SymphonyData out{
