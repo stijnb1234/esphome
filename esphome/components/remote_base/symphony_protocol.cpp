@@ -6,6 +6,9 @@ namespace remote_base {
 
 static const char *const TAG = "remote.symphony";
 
+// This is based on https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Symphony.cpp
+// Licensed under the LGPL-2.1 license (https://github.com/crankyoldgit/IRremoteESP8266/blob/master/LICENSE.txt)
+
 static const uint16_t ZERO_MARK = 400;
 static const uint16_t ZERO_SPACE = 1250;
 static const uint16_t ONE_MARK = ZERO_SPACE;
